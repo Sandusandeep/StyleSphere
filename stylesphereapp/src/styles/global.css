@@ -1,0 +1,34 @@
+:root {
+  --bg: #f7f8fb;
+  --accent: #ff5a7a;
+  --muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111827;
+}
+
+/* minimal form styles */
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}

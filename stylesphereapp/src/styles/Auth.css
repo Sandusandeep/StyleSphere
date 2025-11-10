@@ -1,0 +1,116 @@
+/* src/styles/Auth.css */
+
+.auth-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* App name (top right corner) */
+.app-name {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Auth Card */
+.auth-card {
+  width: 380px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation for card */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.auth-card h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-card input:focus {
+  border-color: #ff6a00;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 106, 0, 0.4);
+}
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-link {
+  color: #ee0979;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+}

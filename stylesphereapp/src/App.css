@@ -1,0 +1,144 @@
+/* src/App.css */
+
+/* ====== GENERAL STYLING ====== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ====== BACKGROUND SECTION ====== */
+.auth-bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 78, 80, 0.6),
+      rgba(249, 212, 35, 0.6)
+    ),
+    url("https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=1740&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+/* ====== GLASS CARD EFFECT ====== */
+.glass-card {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* ====== ANIMATION ====== */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ====== TITLES ====== */
+.brand-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.auth-title {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.auth-subtitle {
+  color: #eaeaea;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* ====== INPUTS ====== */
+.auth-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ====== BUTTON ====== */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 78, 80, 0.4);
+}
+
+/* ====== FOOTER LINK ====== */
+.auth-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.auth-link {
+  color: #f9d423;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* ====== ERROR BOX ====== */
+.auth-error {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ffbaba;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}

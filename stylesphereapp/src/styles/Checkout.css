@@ -1,0 +1,136 @@
+.checkout-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f9f9f9, #f1f3f6);
+  font-family: "Poppins", sans-serif;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: green;
+  color: white;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: #f5a623;
+}
+
+.checkout-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+
+.checkout-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.checkout-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.checkout-left img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.checkout-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-right h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.checkout-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1rem;
+  margin-left: 8px;
+}
+
+.checkout-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.add-btn,
+.pay-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn {
+  background: #f5a623;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #f39c12;
+}
+
+.pay-btn {
+  background: #675e5e;
+  color: white;
+}
+
+.pay-btn:hover {
+  background: #333;
+}
+.logout-link {
+  color: #ff5555;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
