@@ -28,8 +28,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [bannerRes, productRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/banners"),
-          axios.get("http://localhost:5000/api/products"),
+          axios.get("https://stylesphere-q6vb.onrender.com/api/banners"),
+          axios.get("https://stylesphere-q6vb.onrender.com/api/products"),
         ]);
         setBanners(bannerRes.data);
         const shuffled = productRes.data.sort(() => 0.5 - Math.random());
@@ -46,7 +46,7 @@ const Home = () => {
   //   const loadFavs = async () => {
   //     try {
   //       const res = await axios.get(
-  //         `http://localhost:5000/api/favourites/${userId}`
+  //         `https://stylesphere-q6vb.onrender.com/api/favourites/${userId}`
   //       );
   //       setFavouriteCount(res.data?.length || 0);
   //     } catch (err) {
@@ -71,7 +71,7 @@ const Home = () => {
       return;
     }
     try {
-      await axios.post(`http://localhost:5000/api/favourites`, {
+      await axios.post(`https://stylesphere-q6vb.onrender.com/api/favourites`, {
         userId,
         productId: product._id || product.id,
       });

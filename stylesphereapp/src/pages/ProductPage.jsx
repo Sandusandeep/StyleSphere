@@ -31,7 +31,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get("https://stylesphere-q6vb.onrender.com/api/products");
         setProducts(res.data);
       } catch (err) {
         console.error("Error loading products:", err);
