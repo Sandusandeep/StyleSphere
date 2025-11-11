@@ -24,7 +24,7 @@ const Login = () => {
         process.env.REACT_APP_API_URL ||
         "https://stylesphere-q6vb.onrender.com";
 
-      const response = await axios.post(`${API_URL}/login`, {
+      const response = await axios.post(`${API_URL}/api/auth/login`, {
         email,
         password,
       });
