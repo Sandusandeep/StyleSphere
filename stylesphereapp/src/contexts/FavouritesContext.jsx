@@ -15,7 +15,7 @@ export const FavouritesProvider = ({ children }) => {
       if (!userId) return;
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/favourites/${userId}`
+          `https://stylesphere-q6vb.onrender.com/api/favourites/${userId}`
         );
         setFavourites(res.data || []);
         setFavouriteCount(res.data.length || 0);
@@ -37,7 +37,7 @@ export const FavouritesProvider = ({ children }) => {
     try {
       // Remove from backend too
       await axios.delete(
-        `http://localhost:5000/api/favourites/${userId}/${productId}`
+        `https://stylesphere-q6vb.onrender.com/api/favourites/${userId}/${productId}`
       );
 
       // Update local context

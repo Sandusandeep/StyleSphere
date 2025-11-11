@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
     if (!email) return;
 
     try {
-      const res = await axios.get(`http://localhost:5000/api/cart/${email}`);
+      const res = await axios.get(`https://stylesphere-q6vb.onrender.com/api/cart/${email}`);
       if (res.data && res.data.items) {
         setItems(res.data.items);
       } else {
@@ -37,7 +37,7 @@ export const CartProvider = ({ children }) => {
       if (!email) return;
 
       try {
-        const res = await axios.get(`http://localhost:5000/api/cart/${email}`);
+        const res = await axios.get(`https://stylesphere-q6vb.onrender.com/api/cart/${email}`);
         if (res.data && res.data.items) {
           setItems(res.data.items);
         } else {
@@ -101,7 +101,7 @@ export const CartProvider = ({ children }) => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/cart", {
+      await axios.post("https://stylesphere-q6vb.onrender.com/api/cart", {
         email,
         items: updated,
         total: updated.reduce(
@@ -125,7 +125,7 @@ export const CartProvider = ({ children }) => {
       const updated = items.filter((i) => !(i.id === id && i.size === size));
       setItems(updated);
       await axios.delete(
-        `http://localhost:5000/api/cart/${email}/${id}/${size}`
+        `https://stylesphere-q6vb.onrender.com/api/cart/${email}/${id}/${size}`
       );
       return;
     }
@@ -135,7 +135,7 @@ export const CartProvider = ({ children }) => {
     );
     setItems(updated);
 
-    await axios.post("http://localhost:5000/api/cart", {
+    await axios.post("https://stylesphere-q6vb.onrender.com/api/cart", {
       email,
       items: updated,
     });
@@ -146,7 +146,7 @@ export const CartProvider = ({ children }) => {
     const email = getUserEmail();
     const updated = items.filter((i) => !(i.id === id && i.size === size));
     setItems(updated);
-    await axios.delete(`http://localhost:5000/api/cart/${email}/${id}/${size}`);
+    await axios.delete(`https://stylesphere-q6vb.onrender.com/api/cart/${email}/${id}/${size}`);
   };
 
   // ✅ Clear entire cart
@@ -154,7 +154,7 @@ export const CartProvider = ({ children }) => {
     const email = getUserEmail();
     setItems([]);
     localStorage.removeItem("cartItems");
-    await axios.delete(`http://localhost:5000/api/cart/clear/${email}`);
+    await axios.delete(`https://stylesphere-q6vb.onrender.com/api/cart/clear/${email}`);
   };
 
   return (
