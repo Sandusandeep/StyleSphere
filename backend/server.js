@@ -18,8 +18,8 @@ app.get("/api/health", (req, res) => {
 const buildPath = path.join(__dirname, "../stylesphereapp/build");
 app.use(express.static(buildPath));
 
-// Works for Express 4 and 5
-app.get("/*", (req, res) => {
+// ✅ FIXED: Works safely for Express 4.x and avoids Express 5 crash
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(buildPath, "index.html"));
 });
 
