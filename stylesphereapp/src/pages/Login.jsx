@@ -22,7 +22,7 @@ const Login = () => {
     try {
       const API_URL =
         process.env.REACT_APP_API_URL ||
-        "https://stylesphere-q6vb.onrender.com";
+        "https://stylesphere-backend-clean.onrender.com";
 
       const response = await axios.post(`${API_URL}/api/auth/login`, {
         email,

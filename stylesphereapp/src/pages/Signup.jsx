@@ -25,7 +25,7 @@ const Signup = () => {
 
     try {
       const API_URL =
-        process.env.REACT_APP_API_URL || "https://stylesphere-q6vb.onrender.com/api/auth";
+        process.env.REACT_APP_API_URL || "https://stylesphere-backend-clean.onrender.com/api/auth";
 
       const response = await axios.post(`${API_URL}/signup`, {
         name,

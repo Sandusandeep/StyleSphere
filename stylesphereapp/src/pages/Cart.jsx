@@ -21,7 +21,7 @@ const Cart = () => {
   // useEffect(() => {
   //   const fetchCart = async () => {
   //     try {
-  //       const res = await axios.get(`https://stylesphere-q6vb.onrender.com/api/cart/${userId}`);
+  //       const res = await axios.get(`https://stylesphere-backend-clean.onrender.com/api/cart/${userId}`);
   //       setItems(res.data?.items || []);
   //     } catch (err) {
   //       console.error("Error fetching cart:", err);
@@ -41,7 +41,10 @@ const Cart = () => {
     if (!userId || items.length === 0) return;
     const saveCart = async () => {
       try {
-        await axios.post(`https://stylesphere-q6vb.onrender.com/api/cart/${userId}`, { items });
+        await axios.post(
+          `https://stylesphere-backend-clean.onrender.com/api/cart/${userId}`,
+          { items }
+        );
       } catch (err) {
         console.error("Error saving cart:", err);
       }
@@ -54,7 +57,7 @@ const Cart = () => {
   //   const loadFavs = async () => {
   //     try {
   //       const res = await axios.get(
-  //         `https://stylesphere-q6vb.onrender.com/api/favourites/${userId}`
+  //         `https://stylesphere-backend-clean.onrender.com/api/favourites/${userId}`
   //       );
   //       setFavouriteCount(res.data?.length || 0);
   //     } catch (err) {
