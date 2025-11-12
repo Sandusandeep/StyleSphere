@@ -19,10 +19,12 @@ mongoose
 
 // --- Import routes ---
 const authRoutes = require("./routes/auth");
-
+const bannerRoutes = require("./routes/banners");
+const productRoutes = require("./routes/products");
 // --- API routes ---
 app.use("/api/auth", authRoutes);
-
+app.use("/api/banners", bannerRoutes);
+app.use("/api/products", productRoutes);
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
