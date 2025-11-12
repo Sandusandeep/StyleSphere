@@ -4,9 +4,7 @@
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
-    "build": "cd ../stylesphereapp && npm install && npm run build",
-    "postinstall": "npm rebuild && npm install mime-types"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
